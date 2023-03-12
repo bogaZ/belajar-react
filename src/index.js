@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App from './App'
+import Tombol from './button/index'
+import List from './list/index'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+var data = 100
+let content;
+if (data == 1000) {
+  content = <Tombol />;
+} else {
+  content = <List />;
+}
+
 root.render(
   <React.StrictMode>
     <App />
+    {/* {content} */}
   </React.StrictMode>
 );
 
